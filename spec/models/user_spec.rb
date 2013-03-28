@@ -80,10 +80,10 @@ describe User do
             it { should_not == user_for_invalid_password }
             specify { user_for_invalid_password.should be_false }
         end
-describe "with a password that's too short" do
-  before { @user.password = @user.password_confirmation = "a" * 5 }
-  it { should be_invalid }
-end
+        describe "with a password that's too short" do
+            before { @user.password = @user.password_confirmation = "a" * 5 }
+            it { should be_invalid }
+        end
     end
 end
 
